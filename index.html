@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .login-card {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Nút quay lại trang chủ */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .back-home:hover {
+            color: #667eea;
+            transform: translateX(-3px);
+        }
+
+        .back-home svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .login-card h2 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .login-card p.subtitle {
+            color: #777;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid #e1e1e1;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <!-- Đường dẫn nút quay lại (thay href="#" bằng đường dẫn trang chủ thực tế của bạn) -->
+        <a href="https://nnphuong1511-max.github.io/cu-i/" class="back-home">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+            </svg>
+            Trang chủ
+        </a>
+
+        <h2>Đăng Nhập</h2>
+        <p class="subtitle">Chào mừng bạn quay trở lại!</p>
+
+        <form>
+            <div class="input-group">
+                <label for="email">Email hoặc Tên đăng nhập</label>
+                <input type="text" id="email" placeholder="nhapemail@example.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="actions">
+                <label class="remember-me">
+                    <input type="checkbox"> Ghi nhớ đăng nhập
+                </label>
+                <a href="#" class="forgot-password">Quên mật khẩu?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Đăng Nhập</button>
+        </form>
+
+        <div class="signup-link">
+            Chưa có tài khoản? <a href="#">Đăng ký ngay</a>
+        </div>
+    </div>
+
+</body>
+</html>
